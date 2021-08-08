@@ -203,10 +203,8 @@ def error_handler(update: object, context: CallbackContext):
 def main() -> None:
     updater = Updater(bot_token)
 
-    # Get the dispatcher to register handlers
     dispatcher = updater.dispatcher
 
-    # Add conversation handler
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler('start', start)],
         states={
